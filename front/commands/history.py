@@ -17,7 +17,7 @@ def _parse_dt(value: str) -> datetime:
 def last_transactions(token: str, limit: int = 5) -> list:
     """Возвращает последние операции в формате, понятном GUI/CLI.
 
-    ВАЖНО: API друга отдаёт related_account_id (номер счёта получателя/
+    ВАЖНО: API отдаёт related_account_id (номер счёта получателя/
     отправителя), а не его username — эндпоинта для обратного поиска
     username по account_id в API нет. Поэтому в поле counterparty мы можем
     показать только "счёт #N", а не имя человека. Если это критично для
