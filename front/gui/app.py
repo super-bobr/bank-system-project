@@ -1,8 +1,5 @@
 """Desktop GUI для банковской системы (tkinter).
 
-Переиспользует всю бизнес-логику БЕЗ ИЗМЕНЕНИЙ: auth.py, session.py,
-commands/*.py — те же функции, что и в CLI. Это просто другой "фронт".
-
 Структура окна: три "экрана" (Frame), наложенные друг на друга —
 LoginFrame, RegisterFrame, DashboardFrame. Показываем нужный через
 tkraise(). Это стандартный паттерн переключения экранов в tkinter.
@@ -167,7 +164,7 @@ class RegisterFrame(ttk.Frame):
 
     def do_register(self):
         try:
-            # API друга сразу возвращает токен при регистрации (авто-вход) —
+            # API сразу возвращает токен при регистрации (авто-вход) —
             # отдельно логиниться после этого не нужно.
             token = auth.register(
                 self.name_entry.get().strip(),
