@@ -71,7 +71,7 @@ commands/
     transfer.py          # POST /account/transfer (по username)
     history.py            # GET /transactions
     profile.py             # GET /me + баланс
-backend/         # копия бэкенда друга для локального запуска и тестов
+backend/         # копия бэкенда для локального запуска и тестов
 ```
 запущенный API друга на localhost:8000): регистрация с авто-входом,
 пополнение, снятие, перевод между двумя пользователями, история,
