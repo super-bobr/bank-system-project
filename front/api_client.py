@@ -1,4 +1,4 @@
-"""Тонкий HTTP-клиент к API друга (FastAPI).
+"""Тонкий HTTP-клиент (FastAPI).
 
 Все функции здесь просто вызывают эндпоинты и возвращают распарсенный JSON.
 Ошибки сервера (формат {"error": {"code": ..., "message": ...}}) превращаются
@@ -21,7 +21,7 @@ from exceptions import (
     UserInactive,
 )
 
-# Соответствие кодов ошибок API друга (app/core/errors.py, AppError.code)
+# Соответствие кодов ошибок API (app/core/errors.py, AppError.code)
 # нашим локальным исключениям.
 ERROR_MAP = {
     "username_taken": DuplicateUserError,
