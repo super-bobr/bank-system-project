@@ -10,7 +10,7 @@
    -> commands/*.py  (баланс, перевод, история...)
    -> auth.py         (регистрация, вход, проверка токена)
    -> api_client.py    (HTTP-запросы + разбор ошибок)
-   -> backend_friend/  (FastAPI, слушает на localhost:8000)
+   -> backend/  (FastAPI, слушает на localhost:8000)
    -> PostgreSQL (база друга)
 ```
 
@@ -49,7 +49,7 @@ python3 gui/app.py
 слушает на другом адресе — задай переменную окружения:
 
 ```bash
-export BANK_API_URL=http://адрес-друга:8000
+export BANK_API_URL=http://адрес:8000
 ```
 
 CLI-версия для отладки без GUI: `python3 main.py`.
